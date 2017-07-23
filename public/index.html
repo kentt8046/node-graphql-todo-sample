@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./js/vendor.js"></script>
+</head>
+
+<body>
+  <div class="container notify"></div>
+  <section class="section">
+    <div class="container">
+      <div id="user_form" class="box">
+        <div class="field">
+          <div class="control">
+            <input name="user_id" class="input" type="text" placeholder="user id input">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary">Set</button>
+          </div>
+        </div>
+      </div>
+      <div id="todo_form" class="box">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="task input">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary">Add</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="todo_list" class="box todo-list">
+
+      </div>
+    </div>
+  </section>
+  <script src="./js/bundle.js"></script>
+</body>
+
+</html>

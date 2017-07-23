@@ -1,0 +1,27 @@
+
+.todo-list {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.todo-card__done {
+  background-color: lightgray;
+  color: gray;
+}
+
+.todo-card .field.focused {
+  display: none;
+}
+.todo-card__focus .field:not(.focused) {
+  display: none;
+}
+
+.notify {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 40%;
+  min-width: 200px;
+  z-index: 99999999;
+}
+

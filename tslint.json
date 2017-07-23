@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "tslint-microsoft-contrib"
+  ],
+  "rules": {
+    "missing-jsdoc": false,
+    "export-name": false,
+    "no-default-export": false,
+    "ordered-imports": [
+      false
+    ],
+    "trailing-comma": [
+      false
+    ],
+    "typedef": [
+      false
+    ],
+    "no-relative-imports": false,
+    "curly": false,
+    "interface-name": [
+      false
+    ],
+    "no-any": false,
+    "no-require-imports": false,
+    "no-var-requires": false,
+    "no-parameter-properties": false,
+    "no-unused-variable": [
+      true,
+      {
+        "ignore-pattern": "^_"
+      }
+    ],
+    "no-invalid-this": [
+      false
+    ],
+    "no-function-expression": false,
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "variable-name": [
+      false
+    ],
+    "no-shadowed-variable": false,
+    "import-name": false,
+    "no-multiline-string": false,
+    "no-import-side-effect": false,
+    "align": [
+      true,
+      "parameters",
+      "statements"
+    ],
+    "quotemark": [
+      true,
+      "double"
+    ]
+  }
+}
