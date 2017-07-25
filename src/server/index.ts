@@ -6,9 +6,9 @@ import { middleware } from "./middleware";
 import { createContext } from "./context";
 import { setupSubscriptionServer } from "./server";
 
-export function createServer() {
+export async function createServer() {
   const app = new Koa();
-  Object.assign(app.context, createContext());
+  Object.assign(app.context, await createContext());
   app.use(middleware());
 
   const server = http.createServer(app.callback());

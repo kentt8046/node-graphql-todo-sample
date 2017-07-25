@@ -8,7 +8,7 @@ interface TodoQueryArgs {
 export function todo(payload: TodoQueryArgs, args: TodoQueryArgs, ctx: AppContext) {
   const { id } = payload || args;
   console.log("todo", id, Object.keys(ctx));
-  const { Todo } = ctx.db;
+  const { Todo } = ctx.sequelize.models;
   const load = promisify(Todo.findOne.bind(Todo));
 
   return load({ _id: id });

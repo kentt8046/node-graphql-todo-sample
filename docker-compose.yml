@@ -1,0 +1,20 @@
+version: "3.0"
+services:
+  redis:
+    image: redis:4.0.1-alpine
+    ports:
+      - 127.0.0.1:6379:6379
+  mysql:
+    image: mysql:5.7.19
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./resource/env/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 127.0.0.1:3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "todo"
+
+volumes:
+  mysql-data:
+    driver: local

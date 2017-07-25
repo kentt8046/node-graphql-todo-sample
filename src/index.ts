@@ -1,4 +1,13 @@
+import * as cluster from "cluster";
 import { createServer } from "./server";
 
-createServer().listen(3000);
-console.log(":3000");
+if (cluster.isMaster) {
+  cluster.fork();
+  cluster.fork();
+} else {
+  createServer()
+    .then(server => {
+      server.listen(3000);
+      console.log(":3000");
+    });
+}
